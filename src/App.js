@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "../src/components/header/Header.jsx"
+import Search from "../src/components/Search/Search.jsx"
+import Select from "../src/components/Select/Select.jsx"
+import Cards from "../src/components/Cards/Cards.jsx"
+import "../src/components/header/header.css";
+import "../src/App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <section className="holder">
+        <div className="container">
+          <div className="holder__inner">
+            <div className="holder__top">
+              <Search />
+              <Select />
+            </div>
+            <div className="holder__bottom">
+              <ul className="list">
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
