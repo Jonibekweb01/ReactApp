@@ -1,11 +1,18 @@
+import { useEffect, useRef, useState } from "react";
 import "../Search/search.css";
 
-const Search = () => {
+const Search = ({ setValue }) => {
   return (
-    <form className="search__form" method="post">
+    <form className="search__form">
       <input
+        onKeyUp={(evt) => {
+          if (evt.code === "Enter") {
+            setValue(evt.target.value);
+            evt.target.value = "";
+          }
+        }}
         className="search__input"
-        type="text"
+        type="search"
         name="Country: "
         aria-label="Input"
         placeholder="Search for a country…"

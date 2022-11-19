@@ -1,8 +1,12 @@
-import "../Select/select.css"
+import "../Select/select.css";
 
-const Select = () => {
+const Select = ({ setSelect }) => {
   return (
-    <select className="select">
+    <select
+      onChange={(evt) => setSelect(evt.target.value)}
+      className="select"
+      defaultValue=""
+    >
       <option className="select__option" disabled selected>
         Filter by Region
       </option>
