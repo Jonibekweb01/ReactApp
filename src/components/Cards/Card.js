@@ -8,9 +8,9 @@ const Cards = ({ all }) => {
         <img src={all.flags.png} alt="" />
         <div className="text-center">
           <h3>{all.name.common}</h3>
-          <p>Population: <span>all.population</span></p>
-          <p>Region: <span>all.region</span></p>
-          <p>Capital: <span>all.capital</span></p>
+          <p>Population: <span>{all.population}</span></p>
+          <p>Region: <span>{all.region}</span></p>
+          <p>Capital: <span>{all.capital}</span></p>
         </div>
       </Link>
     </li>
