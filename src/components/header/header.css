@@ -1,6 +1,6 @@
-header {
+.header__inners {
   padding: 23px 0;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
 }
 
@@ -32,6 +32,23 @@ header {
   color: #111517;
 }
 
+.dark .header__inners {
+  background-color: #2b3844;
+}
+
+.dark .header__title {
+  color: #fff;
+}
+
+.dark button {
+  color: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
 @media only screen and (max-width: 565px) {
   body {
     width: 100% !important;

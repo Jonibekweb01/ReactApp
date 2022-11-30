@@ -4,12 +4,16 @@ import Search from "../../components/Search/Search";
 import Select from "../../components/Select/Select";
 import Cards from "../../components/Cards/Card";
 import Header from "../../components/header/Header";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+import './home.css';
 
 export const Home = () => {
 
     const [data, setData] = useState([]);
     const [value, setValue] = useState("");
     const [select, setSelect] = useState("");
+    const { theme, setTheme } = useContext(ThemeContext);
 
     useEffect(() => {
         if (value.length) {
@@ -33,23 +37,25 @@ export const Home = () => {
     return (
         <>
             <Header />
-            <section className="holder">
-                <div className="container">
-                    <div className="holder__inner">
-                        <div className="holder__top">
-                            <Search setValue={setValue} />
-                            <Select setSelect={setSelect} />
-                        </div>
-                        <div className="holder__bottom">
-                            {data.length && (
-                                <ul className="list flex-wrap d-flex gap-5 justify-content-between list-unstyled">
-                                    {
-                                        data.map((item) => (
-                                            <Cards key={item.name.official} all={item} />
-                                        ))
-                                    }
-                                </ul>
-                            )}
+            <section className={theme}>
+                <div className="holder">
+                    <div className="container">
+                        <div className="holder__inner">
+                            <div className="holder__top">
+                                <Search setValue={setValue} />
+                                <Select setSelect={setSelect} />
+                            </div>
+                            <div className="holder__bottom">
+                                {data.length && (
+                                    <ul className="list flex-wrap d-flex gap-5 justify-content-between list-unstyled">
+                                        {
+                                            data.map((item) => (
+                                                <Cards key={item.name.official} all={item} />
+                                            ))
+                                        }
+                                    </ul>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

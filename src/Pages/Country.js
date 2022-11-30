@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 export const Country = () => {
     const { name } = useParams();
+
     const [click, setClick] = useState({
         isLoading: true,
         isError: false,

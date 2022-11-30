@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import "../Search/search.css";
 
 const Search = ({ setValue }) => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <form className="search__form">
+    <form className={theme}>
       <input
         onKeyUp={(evt) => {
           if (evt.code === "Enter") {

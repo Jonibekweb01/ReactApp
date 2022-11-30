@@ -28,3 +28,7 @@
   line-height: 20px;
   color: #848484;
 }
+
+.dark input {
+  background-color: #2b3844;
+}

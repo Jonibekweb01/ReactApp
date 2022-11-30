@@ -28,3 +28,17 @@
   color: #111517;
   margin-bottom: 8px;
 }
+
+.titles .titless {
+  color: black !important;
+}
+
+.dark li {
+  background-color: #2b3844;
+  border-radius: 10px;
+}
+
+.dark .titles,
+.titless {
+  color: #fff;
+}

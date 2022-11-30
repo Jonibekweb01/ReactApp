@@ -1,10 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import "../Select/select.css";
 
 const Select = ({ setSelect }) => {
+  const { theme } = useContext(ThemeContext);
   return (
     <select
       onChange={(evt) => setSelect(evt.target.value)}
-      className="select"
+      className={theme}
       defaultValue=""
     >
       <option className="select__option" disabled selected>

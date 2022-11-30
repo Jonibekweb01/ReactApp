@@ -13,3 +13,18 @@
   border: none;
   outline: none;
 }
+
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dark select {
+  background-color: #2b3844;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
